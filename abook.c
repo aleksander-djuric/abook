@@ -113,7 +113,8 @@ int main(int argc, char *argv[])
 
     term_mode(1, &term);
 
-    (void) data_save();
+    data_save();
+    free_book();
 
     return 0;
 }
