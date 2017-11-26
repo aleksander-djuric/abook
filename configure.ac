@@ -1,17 +1,16 @@
-AC_INIT([abook], [1.0])                                                                                                                 
+AC_INIT([abook], [1.0])
 AC_CONFIG_SRCDIR([abook.c])
+AC_CONFIG_HEADERS([config.h])
 AM_INIT_AUTOMAKE([foreign])
 
-# Common compiler flags
-CFLAGS="-Wall -O2"
-
-# Checks for programs
+# Checks for programs.
 AC_PROG_CC
-AM_PROG_CC_STDC
-AC_PROG_INSTALL
 
-# Checks for header files
-AC_HEADER_STDC
+# Checks for header files.
+AC_CHECK_HEADERS([stdlib.h string.h termios.h])
+
+# Checks for library functions.
+AC_FUNC_MALLOC
 
 AC_CONFIG_FILES([Makefile])
 AC_OUTPUT

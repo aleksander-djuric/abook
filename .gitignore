@@ -17,4 +17,5 @@ autom4te.cache/
 .dirstamp
 *.o
 *.l[ao]
+*.bak
 *~
